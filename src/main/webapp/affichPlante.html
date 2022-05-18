@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TP fleuriste</title>
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+	crossorigin="anonymous"></script>
+<!-- Jquery -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+	integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Menu -->
+<script type="text/javascript" src="./js/menu.js"></script>
+<!-- AffichJS -->
+<script type="text/javascript" src="./js/affichPlante.js"></script>
+</head>
+<body>
+	<!-- Barre de navigation -->
+	<div id="menu"></div>
+
+	<!-- Affichage des erreurs -->
+	<div class="alert alert-danger" id="errorPlante"></div>
+
+	<div>
+		<h3 class="text-center m-3">Liste des plantes</h3>
+		<div class="container-fluid">
+			<div class="row justify-content-around" id="contentPlante"></div>
+		</div>
+	</div>
+
+
+	<!-- Modal d'affichage -->
+	<div class='modal fade' id='modAffichPlante' data-bs-backdrop='static'
+		data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticModal'
+		aria-hidden='true'>
+		<div class='modal-dialog modal-dialog-centered'>
+			<div class='modal-content'>
+				<div class='modal-header'>
+					<h5 class='modal-title' id='staticModal'></h5>
+					<button type='button' class='btn btn-close' data-bs-dismiss='modal'
+						aria-label='Close'></button>
+				</div>
+				<div class='modal-body'></div>
+				<div class='modal-footer'>
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<button class='btn btn-success btn-sm w-100' type='button' id='ajtPanier'>Ajouter	au panier</button>
+							</div>
+							<div class="col">
+								<button class='btn btn-secondary btn-sm w-100' type='button' id='fermerModal' data-bs-dismiss='modal'>Fermer</button>
+							</div>
+						</div>
+					</div>
+				
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
