@@ -23,6 +23,10 @@
 <script type="text/javascript" src="./js/menu.js"></script>
 <!-- AffichJS -->
 <script type="text/javascript" src="./js/affichPlante.js"></script>
+<!-- Ajout Panier -->
+<script type="text/javascript" src="./js/ajtPanier.js"></script>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body>
 	<!-- Barre de navigation -->
@@ -50,25 +54,71 @@
 					<button type='button' class='btn btn-close' data-bs-dismiss='modal'
 						aria-label='Close'></button>
 				</div>
-				<div class='modal-body'></div>
+				<div class='modal-body' id="bodyPlante"></div>
 				<div class='modal-footer'>
 					<div class="container">
 						<div class="row">
 							<div class="col">
-								<button class='btn btn-success btn-sm w-100' type='button' id='ajtPanier'>Ajouter	au panier</button>
+								<button class='btn btn-success btn-sm w-100' type='button'
+									id='ajtPanier' data-bs-toggle='modal'
+									data-bs-target='#modAffichPlante'>Ajouter au panier</button>
 							</div>
 							<div class="col">
-								<button class='btn btn-secondary btn-sm w-100' type='button' id='fermerModal' data-bs-dismiss='modal'>Fermer</button>
+								<button class='btn btn-secondary btn-sm w-100' type='button'
+									id='fermerModal' data-bs-dismiss='modal'>Fermer</button>
 							</div>
 						</div>
 					</div>
-				
-					
-					
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<!-- Modal pour ajout panier -->
+	<div class='modal fade' id='modAjtPanier' data-bs-backdrop='static'
+		data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticModal'
+		aria-hidden='true'>
+		<div class='modal-dialog modal-dialog-centered'>
+			<div class='modal-content'>
+				<div class='modal-header'>
+					<h5 class='modal-title' id='staticModalAjt'></h5>
+					<button type='button' class='btn btn-close' data-bs-dismiss='modal'
+						aria-label='Close'></button>
+				</div>
+				<div class='modal-body' id="bodyAjt">
+					<div class="m-3">
+						<label class="form-label"> Quantité souhaité : </label> <input
+							class="form-control" type="number" min="0" name="qte" id="qte">
+					</div>
+				</div>
+				<div class='modal-footer'>
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<button class='btn btn-success btn-sm w-100' type='button'
+									id='valAjtPanier'>Valider</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- toast pour l'ajout -->
+	<div class="toast-container position-fixed bottom-0 end-0 p-3">
+		<div id="affichToast" class="toast" role="alert" aria-live="assertive"
+			aria-atomic="true">
+			<div class="toast-header">
+				<i class="bi bi-cart-check fs-4"></i>
+				<strong class="me-auto"> Panier</strong>
+				<button type="button" class="btn-close" data-bs-dismiss="toast"
+					aria-label="Close"></button>
+			</div>
+			<div class="toast-body" id="toaBody">
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

@@ -20,4 +20,8 @@ public class DaoFactory {
 	public static BouquetDAO getBouquetDAO() {
 		return new BouquetDAOImpl();
 	}
+	
+	public static LignePanierDAO getLignePanierDAO() {
+		return new LignePanierDAOImpl();
+	}
 }

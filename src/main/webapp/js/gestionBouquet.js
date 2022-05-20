@@ -170,7 +170,7 @@ function modifierBouquet() {
 		}
 	}
 
-	//console.log(data);
+	console.log(data);
 
 	$.ajax({
 		type: 'put',

@@ -35,9 +35,10 @@ function getBouquet(id) {
 		data += "<p class='fw-bold text-decoration-underline'>Style : </p> <p>" + style + "</p>";
 		data += "<p class='fw-bold text-decoration-underline'>Tarif : </p> <p>" + tarif + "</p>";
 		data += "<p class='fw-bold text-decoration-underline'>Stock : </p> <p>" + stock + "</p>";
+		data += "<input type='hidden' id='idbouquets' value='"+ id +"'>";
 		data += "</div> </div>";
 
-		$(".modal-body").html(data);
+		$("#bodyBouquet").html(data);
 	});
 }
 
@@ -47,7 +48,7 @@ function getBouquetsCards(bouquets) {
 		var card = "<div class='card' style='width: 18rem;'>";
 		card += "<img src='" + b.urlImage + "' class='card-img-top p-2' alt= image de " + b.nomProduit + ">";
 		card += "<div class='card-body'>";
-		card += "<h5 class='card-title'>" + b.nomProduit + "</h5>";
+		card += "<h5 class='card-title' id='card"+ b.id+"'>" + b.nomProduit + "</h5>";
 		card += "<p class='card-text'>";
 		card += "Prix unitaire : " + b.prixUnit + " €";
 		card += "</p>";

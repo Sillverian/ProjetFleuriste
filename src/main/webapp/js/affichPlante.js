@@ -18,6 +18,7 @@ function getPlante(id) {
 		var stock = plante.stock;
 		var info = plante.infoArticle;
 		var url = plante.urlImage;
+		var id = plante.id;
 
 		$("#staticModal").html("Info de l'article : " + nom);
 
@@ -29,9 +30,10 @@ function getPlante(id) {
 		data += "<p class='fw-bold text-decoration-underline'>Description : </p> <p>" + info + "</p>";
 		data += "<p class='fw-bold text-decoration-underline'>Tarif : </p> <p>" + tarif + "</p>";
 		data += "<p class='fw-bold text-decoration-underline'>Stock : </p> <p>" + stock + "</p>";
+		data += "<input type='hidden' id='idplantes' value='"+ id +"'>";
 		data += "</div> </div>";
 
-		$(".modal-body").html(data);
+		$("#bodyPlante").html(data);
 	});
 }
 
@@ -41,7 +43,7 @@ function getPlantesCards(plantes) {
 		var card = "<div class='card' style='width: 18rem;'>";
 		card += "<img src='" + p.urlImage + "' class='card-img-top p-2' alt= image de " + p.nomProduit + ">";
 		card += "<div class='card-body'>";
-		card += "<h5 class='card-title'>" + p.nomProduit + "</h5>";
+		card += "<h5 class='card-title' id='card"+ p.id+"'>" + p.nomProduit + "</h5>";
 		card += "<p class='card-text'>";
 		card += "Prix unitaire : " + p.prixUnit + " €";
 		card += "</p>";

@@ -81,7 +81,7 @@ function ajouterFleurs() {
 			$('#infoFleur').val("");
 			$('#urlFleur').val("");
 			$('#cdFleur').val("");
-			$('#saisonFleur').val("");
+			//$('#saisonFleur').val("");
 
 			$('#modAjoutFleur').modal('hide');
 			getFleurs();
@@ -133,7 +133,7 @@ function modifierFleur() {
 			id: $('#saisonFleur').val()
 		}
 	}
-
+	
 	//console.log(data);
 
 	$.ajax({

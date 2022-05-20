@@ -33,9 +33,10 @@ function getFleur(id) {
 		data += "<p class='fw-bold text-decoration-underline'>Saison : </p> <p>" + saison + "</p>";
 		data += "<p class='fw-bold text-decoration-underline'>Tarif : </p> <p>" + tarif + "</p>";
 		data += "<p class='fw-bold text-decoration-underline'>Stock : </p> <p>" + stock + "</p>";
+		data += "<input type='hidden' id='idfleurs' value='"+ id +"'>";
 		data += "</div> </div>";
 
-		$(".modal-body").html(data);
+		$("#bodyFleur").html(data);
 	});
 }
 
@@ -45,7 +46,7 @@ function getFleursCards(fleurs) {
 		var card = "<div class='card' style='width: 18rem;'>";
 		card += "<img src='" + f.urlImage + "' class='card-img-top p-2' alt= image de " + f.nomProduit + ">";
 		card += "<div class='card-body'>";
-		card += "<h5 class='card-title'>" + f.nomProduit + "</h5>";
+		card += "<h5 class='card-title' id='card"+ f.id+"'>" + f.nomProduit + "</h5>";
 		card += "<p class='card-text'>";
 		card += "Prix unitaire : " + f.prixUnit + " €";
 		card += "</p>";

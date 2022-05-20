@@ -25,7 +25,7 @@ public class FleurManager {
 	}
 
 	public void ajoutFleur(Fleur p) throws Exception {
-		if (p == null || p.getNomProduit() == null | p.getNomProduit().isBlank()) {
+		if (p == null || p.getNomProduit() == null || p.getNomProduit().isBlank()) {
 			throw new FlowerException("La plante doit posseder un nom");
 		} else {
 			dao.add(p);
